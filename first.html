@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<label for="">NAME</label>
+
+<input type="text" name="" id="nametext">
+<br>
+<br>
+<label for="">Roll number</label>
+
+<input type="text" name="" id="rolltext">
+<br>
+<br>
+<label for="">Mark obtained</label>
+
+<input type="text" name="" id="marktext">
+<br>
+<br>
+<label for="">Total mark</label>
+
+<input type="text" name="" id="totaltext">
+<br>
+<br>
+ <label for="">percentage</label>
+ 
+<input type="text" name="" id="percentagetext">
+
+<br>
+<br>
+<label for="">REsult</label>
+<input type="text" name="" id="tresulttext">
+<br>
+<br>
+<button onclick="REsult()">SUb</button>
+<br>
+<br>
+<textarea name="" id="textarea" cols="30" rows="10"></textarea>
+
+<script>
+
+
+function REsult()
+{
+  var res;
+var MARkobtained= parseFloat (document.getElementById("marktext").value)
+
+var totaltext=parseFloat(document.getElementById("totaltext").value)
+
+var per=(MARkobtained*100)/totaltext
+
+
+
+if (per <40 )
+{
+document.getElementById("tresulttext").value="fail" ;
+res="fail"
+}
+else if(per <50)
+{
+document.getElementById("tresulttext").value="D grade";
+res="D grade";
+}
+
+else if(per <70)
+{
+document.getElementById("tresulttext").value="B grade";
+
+res="B grade";
+}
+else if(per <80)
+{
+document.getElementById("tresulttext").value="A grade";
+res="A grade";
+}
+else if(per <90)
+{
+document.getElementById("tresulttext").value="A one grade";
+res="A one grade";
+}
+else if(per <100)
+{
+document.getElementById("tresulttext").value="A + grade";
+res="A + grade";
+}
+var name=document.getElementById("nametext").value
+var e=document.getElementById("rolltext").value
+
+document.getElementById("percentagetext").value=per;
+document.getElementById("textarea").value=`MR ${name} roll number ${e} your result is ${res} `;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
